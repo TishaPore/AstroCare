@@ -1,0 +1,392 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #080f1f;
+    color: #f1f5f9;
+    min-height: 100vh;
+}
+
+.header {
+    background: #101a2e;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #26354e;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-icon {
+    font-size: 38px;
+}
+
+.logo h1 {
+    font-size: 25px;
+    color: #60a5fa;
+}
+
+.logo p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.mission-status {
+    color: #4ade80;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.live-dot {
+    width: 9px;
+    height: 9px;
+    background: #4ade80;
+    border-radius: 50%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.welcome {
+    background: linear-gradient(135deg, #142b4d, #17213b);
+    border: 1px solid #2c4265;
+    border-radius: 18px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.subtitle {
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.welcome h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.welcome p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.astronaut {
+    font-size: 85px;
+}
+
+.profile-card {
+    margin-top: 25px;
+    background: #111c30;
+    border: 1px solid #26354e;
+    border-radius: 15px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.label {
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    margin-bottom: 12px;
+}
+
+.profile-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.profile-card p:not(.label) {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.normal {
+    color: #4ade80 !important;
+}
+
+.warning {
+    color: #fbbf24 !important;
+}
+
+.critical {
+    color: #f87171 !important;
+}
+
+.section-heading {
+    margin: 35px 0 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.section-heading h2 {
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 13px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+#simulateBtn {
+    background: #2563eb;
+    color: white;
+}
+
+.vitals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.vital-card {
+    background: #111c30;
+    border: 1px solid #26354e;
+    border-radius: 15px;
+    padding: 24px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.vital-icon {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.heart {
+    background: #3b1c34;
+    color: #fb7185;
+}
+
+.oxygen {
+    background: #172e4b;
+    color: #60a5fa;
+}
+
+.temperature {
+    background: #3c2a1a;
+    color: #fb923c;
+}
+
+.status {
+    font-size: 10px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #18392b;
+}
+
+.measurement {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.measurement span:first-child {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.unit {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.description {
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.chart-card {
+    background: #111c30;
+    border: 1px solid #26354e;
+    border-radius: 15px;
+    padding: 25px;
+    height: 300px;
+}
+
+#healthChart {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.alerts-card {
+    background: #111c30;
+    border: 1px solid #26354e;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.alert > span {
+    font-size: 24px;
+}
+
+.alert strong {
+    font-size: 15px;
+}
+
+.alert p {
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.normal-alert {
+    background: #153126;
+    color: #4ade80;
+}
+
+.warning-alert {
+    background: #3b3018;
+    color: #fbbf24;
+}
+
+.critical-alert {
+    background: #3b1c24;
+    color: #f87171;
+}
+
+.demo-controls {
+    margin-top: 35px;
+    background: #111c30;
+    border: 1px solid #26354e;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.demo-controls h2 {
+    margin-bottom: 12px;
+}
+
+.demo-controls p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.alert-button {
+    background: #dc2626;
+    color: white;
+    margin-right: 10px;
+}
+
+.reset-button {
+    background: #334155;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 10px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+@media (max-width: 800px) {
+    .vitals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome h2 {
+        font-size: 24px;
+    }
+
+    .astronaut {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 94%;
+    }
+
+    .welcome {
+        padding: 20px;
+    }
+
+    .welcome h2 {
+        font-size: 21px;
+    }
+
+    .header {
+        padding: 18px 4%;
+    }
+
+    .chart-card {
+        padding: 12px;
+    }
+}

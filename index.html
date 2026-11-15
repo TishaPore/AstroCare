@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AstroCare | Astronaut Health Monitoring</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🚀</span>
+            <div>
+                <h1>AstroCare</h1>
+                <p>Astronaut Health Monitoring System</p>
+            </div>
+        </div>
+
+        <div class="mission-status">
+            <span class="live-dot"></span>
+            DEMO MISSION ACTIVE
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <p class="subtitle">MISSION CONTROL DASHBOARD</p>
+                <h2>Welcome to AstroCare</h2>
+                <p>
+                    Monitor astronaut vital signs and identify
+                    potential health concerns during space missions.
+                </p>
+            </div>
+
+            <div class="astronaut">
+                👨‍🚀
+            </div>
+        </section>
+
+        <section class="profile-card">
+            <div>
+                <p class="label">ASTRONAUT PROFILE</p>
+                <h3>Astronaut Alex Morgan</h3>
+                <p>Astronaut ID: AST-001</p>
+            </div>
+
+            <div>
+                <p class="label">MISSION</p>
+                <h3>Orbit Mission Alpha</h3>
+                <p>Location: Low Earth Orbit (simulated)</p>
+            </div>
+
+            <div>
+                <p class="label">MONITORING STATUS</p>
+                <h3 id="overallStatus" class="normal">
+                    NORMAL
+                </h3>
+                <p id="lastUpdated">Awaiting readings...</p>
+            </div>
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <h2>Vital Signs Monitoring</h2>
+                <p>Simulated astronaut health measurements</p>
+            </div>
+
+            <button id="simulateBtn">
+                🔄 Simulate New Readings
+            </button>
+        </section>
+
+        <section class="vitals-grid">
+
+            <div class="vital-card">
+                <div class="card-top">
+                    <span class="vital-icon heart">♥</span>
+                    <span id="heartStatus" class="status normal">
+                        NORMAL
+                    </span>
+                </div>
+
+                <p class="label">HEART RATE</p>
+
+                <div class="measurement">
+                    <span id="heartRate">72</span>
+                    <span class="unit">BPM</span>
+                </div>
+
+                <p class="description">
+                    Demo range: 50–100 BPM
+                </p>
+            </div>
+
+            <div class="vital-card">
+                <div class="card-top">
+                    <span class="vital-icon oxygen">O₂</span>
+                    <span id="oxygenStatus" class="status normal">
+                        NORMAL
+                    </span>
+                </div>
+
+                <p class="label">OXYGEN SATURATION</p>
+
+                <div class="measurement">
+                    <span id="oxygen">98</span>
+                    <span class="unit">%</span>
+                </div>
+
+                <p class="description">
+                    Demo target: 95% or above
+                </p>
+            </div>
+
+            <div class="vital-card">
+                <div class="card-top">
+                    <span class="vital-icon temperature">🌡</span>
+                    <span id="temperatureStatus" class="status normal">
+                        NORMAL
+                    </span>
+                </div>
+
+                <p class="label">BODY TEMPERATURE</p>
+
+                <div class="measurement">
+                    <span id="temperature">36.8</span>
+                    <span class="unit">°C</span>
+                </div>
+
+                <p class="description">
+                    Demo range: 36.1–37.2 °C
+                </p>
+            </div>
+
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <h2>Health Trend Analysis</h2>
+                <p>Recent simulated heart rate readings</p>
+            </div>
+        </section>
+
+        <section class="chart-card">
+            <canvas id="healthChart"></canvas>
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <h2>Health Alerts</h2>
+                <p>Monitoring notifications</p>
+            </div>
+        </section>
+
+        <section class="alerts-card">
+            <div id="alertMessage" class="alert normal-alert">
+                <span>✓</span>
+                <div>
+                    <strong>All systems normal</strong>
+                    <p>No demo threshold alerts detected.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-controls">
+            <h2>Demonstration Controls</h2>
+
+            <p>
+                Generate a simulated abnormal reading to demonstrate
+                how AstroCare identifies potential health concerns.
+            </p>
+
+            <button id="alertBtn" class="alert-button">
+                ⚠ Simulate Abnormal Reading
+            </button>
+
+            <button id="resetBtn" class="reset-button">
+                Reset Demo
+            </button>
+        </section>
+
+        <footer>
+            <p>
+                AstroCare | NASA Space Apps Challenge 2026
+            </p>
+
+            <p>
+                Educational prototype using simulated data.
+                Not a medical diagnostic system.
+            </p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
